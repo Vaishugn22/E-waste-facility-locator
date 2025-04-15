@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        #filterSection {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #filterSection select {
+            padding: 8px;
+            margin: 0 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bookings List</h1>
+
+    <!-- Filter Section -->
+    <div id="filterSection">
+        <label for="itemTypeFilter">Filter by Item Type:</label>
+        <select id="itemTypeFilter" onchange="filterTable()">
+            <option value="">All</option>
+            {% for booking in bookings %}
+                <option value="{{ booking.type }}">{{ booking.type }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    {% if bookings %}
+        <table id="bookingsTable">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>User ID</th>
+                    <th>Item Type</th>
+                    <th>Recycle Item</th>
+                    <th>Recycle Item Price</th>
+                    <th>Pickup Date</th>
+                    <th>Pickup Time</th>
+                    <th>Facility</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for booking in bookings %}
+                    <tr>
+                        <td>{{ booking.full_name }}</td>
+                        <td class="tooltip">
+                            {{ booking.user_id }}
+                            <span class="tooltiptext">Email: {{ booking.user_email }}</span>
+                        </td>
+                        <td class="item-type">{{ booking.type }}</td>
+                        <td>{{ booking.recycle_item }}</td>
+                        <td>{{ booking.recycle_item_price }}</td>
+                        <td>{{ booking.pickup_date }}</td>
+                        <td>{{ booking.pickup_time }}</td>
+                        <td>{{ booking.selected_facility }}</td>
+                        <td>{{ booking.address }}</td>
+                        <td>{{ booking.phone }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p style="text-align: center;">No bookings found.</p>
+    {% endif %}
+
+    <script>
+        function filterTable() {
+            const filterValue = document.getElementById('itemTypeFilter').value.toLowerCase();
+            const rows = document.querySelectorAll('#bookingsTable tbody tr');
+
+            rows.forEach(row => {
+                const itemType = row.querySelector('.item-type').textContent.toLowerCase();
+                if (filterValue === '' || itemType.includes(filterValue)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
