@@ -1,1 +1,103 @@
 
+[
+    {
+        "name": "Green IT Recycling Center Pvt. Ltd.",
+        "capacity": 100,
+        "lon": 77.6047,
+        "lat": 13.0298,
+        "contact": "09822356062",
+        "time": "10:30 AM - 7:30 PM",
+        "verified": true,
+        "address": "154, 4th A Cross Rd, Seethappa Layout, Chamundi Nagar, Bangalore-560032"
+    },
+    {
+        "name": "E- Parisaraa Private Limited",
+        "capacity": 50,
+        "lon": 77.5121,
+        "lat": 13.0281,
+        "contact": "09921040501",
+        "time": "9:00 AM - 7:00 PM",
+        "verified": false,
+        "address": "No. B, 41/1, 3rd Stage, Maruthi Nagar, Peenya, Bengaluru, Karnataka 560058"
+    },
+    {
+        "name": "E Hasiru E Waste Recycling Company",
+        "capacity": 80,
+        "lon": 77.5121,
+        "lat": 13.0281,
+        "contact": "09890863108",
+        "time": "9:00 AM - 5:00 PM",
+        "verified": false,
+        "address": "No 168/B, 7th Main Rd, Yeshwanthpur Suburb II Stage, Yesvanpur Surburb, Peenya, Bengaluru, Karnataka 560058"
+    },
+    {
+        "name": "Bangalore Ewaste Recyle center(scrap pickup)",
+        "capacity": 90,
+        "lon": 77.6047,
+        "lat": 13.0298,
+        "contact": "09156606777",
+        "time": "9:00 AM - 6:00 PM",
+        "verified": true,
+        "address": "154, 4th A Cross Rd, Seethappa Layout, Chamundi Nagar, Bangalore, Bengaluru, Karnataka 560035"
+    },
+    {
+        "name": "Escrappy Recyclers",
+        "capacity": 70,
+        "lon": 77.4904,
+        "lat": 12.9866,
+        "contact": "09769077008",
+        "time": "8:00 AM - 8:00 PM",
+        "verified": true,
+        "address": "Shushruti Nagar, Byraveshwara Industrial Estate, Bengaluru, Karnataka 560091"
+    },
+    {
+        "name": "K. H. E Waste Recycler",
+        "capacity": 60,
+        "lon": 77.5253,
+        "lat": 12.9446,
+        "contact": "09850289885",
+        "time": "Open 24 hours",
+        "verified": true,
+        "address": "#104, 1st Main 4th Cross Azziz sait Industrial Area Nayandahalli, Bengaluru, Karnataka 560037"
+    },
+    {
+        "name": "Aptus Recycling Pvt Ltd",
+        "capacity": 85,
+        "lon": 77.5572,
+        "lat": 13.0347,
+        "contact": "08007980877",
+        "time": "9:00 AM - 7:00 PM",
+        "verified": true,
+        "address": "442, 4, 6th Main Rd, Gokula 1st Stage, Nanjappa Reddy Colony, Yeswanthpur, Bengaluru, Karnataka 560052"
+    },
+    {
+        "name": "Elxion E-waste Recycling",
+        "capacity": 95,
+        "lon": 77.5764,
+        "lat": 12.8988,
+        "contact": "09326262223",
+        "time": "Open 24 hours",
+        "verified": true,
+        "address": "No 24, 23rd A Main Rd, R.K Colony, Marenahalli, 2nd Phase, J. P. Nagar, Bengaluru, Karnataka 560078"
+    },
+    {
+        "name": "E2E RECYCLING BUSINESS PVT. LTD.",
+        "capacity": 75,
+        "lon": 77.3552,
+        "lat": 13.2043,
+        "contact": "09004547542",
+        "time": "9:30 AM - 6:30 PM",
+        "verified": true,
+        "address": "No.550, Sompura, 2nd stage, Industrial Area, SY No.102, Thyamagondlu Hobli, Dabaspet, Bangalore, Karnataka 562132"
+    },
+    {
+        "name": "E ZONE RECYLERS PVT LTD",
+        "capacity": 200,
+        "lon": 77.6479,
+        "lat": 13.0206,
+        "contact": "0",
+        "time": "10:00 AM - 7:00 PM",
+        "verified": true,
+        "address": "210, 3rd A Cross Rd, HRBR Layout 3rd Block, Keshava Nagar, Kacharakanahalli, Bengaluru, Karnataka 560043"
+    }
+]
